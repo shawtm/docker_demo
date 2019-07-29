@@ -8,5 +8,12 @@ services:
       - "80:5000"
     networks:
       - avinash
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    networks:
+      - avinash
 networks:
   avinash:
