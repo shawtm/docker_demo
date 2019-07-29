@@ -1,0 +1,12 @@
+version: "3"
+services:
+  hi_ram:
+    image: shawtm/demo:latest
+    deploy:
+      replicas: 3
+    ports:
+      - "80:5000"
+    networks:
+      - avinash
+networks:
+  avinash:
